@@ -1,0 +1,10 @@
+7/Out/2011 20:58:12 simulador.Simulador processarErro
+SEVERE: java.io.FileNotFoundException: amb1.das (O sistema não conseguiu localizar o ficheiro especificado)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileReader.<init>(Unknown Source)
+	at simulador.Simulador.obterDefAmb(Simulador.java:224)
+	at simulador.Simulador.iniciar(Simulador.java:149)
+	at Test.main(Test.java:19)
+
