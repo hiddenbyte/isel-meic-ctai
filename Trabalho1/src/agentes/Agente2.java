@@ -16,7 +16,7 @@ public class Agente2 extends Agente{
 
 	protected Accao accao;
 	
-	private IComportamento[] comp;
+	protected IComportamento[] comp;
 	
 	@Override
 	public void agir() {
@@ -45,5 +45,4 @@ public class Agente2 extends Agente{
 			}
 		}
 	}
-
 }

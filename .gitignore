@@ -4,6 +4,9 @@
 
 #netbeans ignore personal stuff 
 
+# generated files
+bin/
+
 ## generic files to ignore
 *~
 
