@@ -2,7 +2,6 @@ package comportamentosComMemoria;
 
 import memorias.MemoriaDeTrabalho;
 import ambiente.Accao;
-import ambiente.Ambiente;
 
 public class EvitarM extends ComportamentoComMemoria{
 
@@ -16,9 +15,9 @@ public class EvitarM extends ComportamentoComMemoria{
 
 	@Override
 	public Accao activar(byte[] per) {
-		if(per[1]==Ambiente.IMG_OBST || 
-				mdt.carregado && ( (per[1] & Ambiente.IMG_ALVO) ==  Ambiente.IMG_ALVO) ||
-				!mdt.carregado && ( (per[1] & Ambiente.IMG_BASE) == Ambiente.IMG_BASE ))
+		if(mdt.obstaculoAdjacente || mdt.alvoEmBaseAdjacente || 
+				mdt.carregado && mdt.alvoAdjacente ||
+				!mdt.carregado && mdt.baseAdjacente)
 			return accao;
 		return null;
 	}

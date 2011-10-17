@@ -5,13 +5,23 @@ import comportamentos.IComportamento;
 import comportamentos.Procurar;
 import comportamentos.Vaguear;
 import comportamentosComMemoria.*;
+import discriminadores.Discriminador;
+import discriminadores.IDiscriminador;
 
 public class Agente3 extends Agente2{
 	
 	MemoriaDeTrabalho mdt;
+	IDiscriminador disc;
 	
 	public Agente3(){
 		mdt = new MemoriaDeTrabalho();
+		disc= new Discriminador();
+	}
+	
+	@Override
+	public void percepcionar() {
+		imagem=getSensorImagem().detectar();
+		disc.descriminar(imagem, mdt);
 	}
 	
 	@Override

@@ -2,7 +2,6 @@ package comportamentosComMemoria;
 
 import memorias.MemoriaDeTrabalho;
 import ambiente.Accao;
-import ambiente.Ambiente;
 
 public class AproximarM extends ComportamentoComMemoria{
 
@@ -16,8 +15,8 @@ public class AproximarM extends ComportamentoComMemoria{
 
 	@Override
 	public Accao activar(byte[] per) {
-		if(!mdt.carregado && per[per.length-1]==Ambiente.IMG_ALVO ||
-				mdt.carregado && per[per.length-1]==Ambiente.IMG_BASE)
+		if(!mdt.carregado && mdt.alvoEmVista ||
+				mdt.carregado && mdt.baseEmVista)
 			return accao;
 		return null;
 	}

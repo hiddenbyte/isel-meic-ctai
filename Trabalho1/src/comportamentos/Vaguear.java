@@ -13,7 +13,6 @@ public class Vaguear implements IComportamento{
 			return new Accao(0,1,Accao.Tipo.MOVER);
 		}
 		
-		 
 	}
 
 }

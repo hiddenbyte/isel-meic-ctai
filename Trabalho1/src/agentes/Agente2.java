@@ -7,34 +7,14 @@ import comportamentos.Procurar;
 import comportamentos.Recolher;
 import comportamentos.Vaguear;
 
-import agente.Agente;
-import ambiente.Accao;
-
-public class Agente2 extends Agente{
-
-	protected byte[] imagem;
-
-	protected Accao accao;
+public class Agente2 extends Agente1{
 	
 	protected IComportamento[] comp;
-	
-	@Override
-	public void agir() {
-		if(accao!=null){
-			getActuador().actuar(accao);
-			getConsola().mostrar(accao.toString());
-		}
-	}
 
 	@Override
 	public void iniciar() {
 		comp= new IComportamento[]{new Recolher(),new Evitar(),new Aproximar(),new Procurar(),new Vaguear()};
 		
-	}
-
-	@Override
-	public void percepcionar() {
-		imagem=getSensorImagem().detectar();
 	}
 
 	@Override

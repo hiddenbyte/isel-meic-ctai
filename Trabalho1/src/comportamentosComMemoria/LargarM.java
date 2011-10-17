@@ -2,7 +2,6 @@ package comportamentosComMemoria;
 
 import memorias.MemoriaDeTrabalho;
 import ambiente.Accao;
-import ambiente.Ambiente;
 
 public class LargarM extends ComportamentoComMemoria{
 
@@ -16,7 +15,7 @@ public class LargarM extends ComportamentoComMemoria{
 
 	@Override
 	public Accao activar(byte[] per) {
-		if(mdt.carregado && per[1]==Ambiente.IMG_BASE)
+		if(mdt.carregado && mdt.baseAdjacente)
 			return accao;
 		return null;
 	}
