@@ -8,11 +8,11 @@ public class Test {
 	 * @param args
 	 */
 	
-	private static String defAmb= "amb2.das";
+	private static String defAmb= "amb1.das";
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		IAgente agent = new Agente3();
+		IAgente agent = new Agente2();
 		Simulador simul = new Simulador();
 		simul.iniciar(agent, defAmb, 70, true);
 		simul.executar();
