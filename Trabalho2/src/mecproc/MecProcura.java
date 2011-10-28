@@ -1,31 +1,44 @@
 package mecproc;
 
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.LinkedList;
+import java.util.PriorityQueue;
 import java.util.Set;
 
-import espest.Operador;
+import espest.OperadorGeral;
 import espest.Transicao;
 
-public abstract class MecProcura<E>  {
+public abstract class MecProcura<E> implements Comparator<No<E>> {
 	
-	protected LinkedList<No<E>> fronteira; 
+	protected PriorityQueue<No<E>> abertos; //change to PriorityQueue<No<E>> ???
 	
-	public LinkedList<No<E>> procurar(E estadoInicial,Objectivo<E> objectivo,Collection<Operador<E>> operadores)
+	public MecProcura()
 	{
-		fronteira = new LinkedList<No<E>>();
-		fronteira.add(new No<E>(estadoInicial));
+		this.abertos = new PriorityQueue<No<E>>(1,this);
+	}
+	
+	public void iniciar()
+	{
+		abertos.clear();
+	}
+	
+	public LinkedList<No<E>> procurar(E estadoInicial,Objectivo<E> objectivo,Collection<OperadorGeral<E>> operadores)
+	{
+		iniciar();
+		
+		abertos.add(new No<E>(estadoInicial));
 		
 		No<E> noActual;
 		
-		while(fronteira.size()>0){
+		while(!abertos.isEmpty()){
 			
-			noActual = fronteira.removeFirst();
+			noActual = abertos.remove();
 			
 			if(objectivo.satisfeito(noActual.obterEstado()) )
 				return solucao(noActual);
-			else
-				expandir(noActual, operadores);
+			
+			expandir(noActual, operadores);
 		}
 		
 		return null;
@@ -36,18 +49,18 @@ public abstract class MecProcura<E>  {
 		LinkedList<No<E>> resultado = new LinkedList<No<E>>();
 		
 		do{
-			resultado.add(noActual);
+			resultado.addFirst(noActual);
 			noActual=noActual.obterAnterior();
 		}while(noActual!=null);
 		
 		return resultado;
 	}
 
-	private void expandir(No<E> no, Collection<Operador<E>> operadores)
+	private void expandir(No<E> no, Collection<OperadorGeral<E>> operadores)
 	{
 		Set<Transicao<E>> transicoes;
 
-		for(Operador<E> op : operadores){
+		for(OperadorGeral<E> op : operadores){
 			transicoes = op.aplicar(no.obterEstado());
 			for(Transicao<E> t : transicoes){
 				juntar(new No<E>(t,no));
@@ -55,5 +68,8 @@ public abstract class MecProcura<E>  {
 		}
 	}
 	
-	protected abstract void juntar(No<E> no);
+	private void juntar(No<E> no)
+	{
+		abertos.add(no);
+	}
 }

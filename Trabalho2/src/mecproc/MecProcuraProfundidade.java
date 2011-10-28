@@ -1,10 +1,8 @@
 package mecproc;
 
-public class MecProcuraProfundidade<E> extends MecProcura<E>{
-
+public class MecProcuraProfundidade<E> extends MecProcura<E> {
 	@Override
-	protected void juntar(No<E> no) {
-		fronteira.addFirst(no);
+	public int compare(No<E> noIns, No<E> no) {
+		return  no.getProf() - noIns.getProf();
 	}
-
 }

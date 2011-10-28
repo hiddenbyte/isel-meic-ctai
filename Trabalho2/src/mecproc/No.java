@@ -8,21 +8,32 @@ public class No<E> {
 	private No<E> anterior;
 	private Operador<E> operador;
 	
+	/** Profundidade do nó na árvore de procura */
+	private int prof;
+	/** Custo de percurso até ao nó */
+	private double custo;
+	
 	public No(E estado)
 	{
-		this(estado,null,null);
+		this(estado,null,null,0,0);
 	}
 	
-	public No(Transicao<E> transicao, No<E> noAnterior)
+	public No(Transicao<E> transicao, No<E> noAnterior) 
 	{
-		this(transicao.obterEstadoSuc(), noAnterior, transicao.obterOperador());
+		this(transicao.obterEstadoSuc(),
+				noAnterior, 
+				transicao.obterOperador(), 
+				noAnterior.getProf() +1,
+				noAnterior.getCusto() + transicao.getCusto());
 	}
 	
-	public No(E estado,No<E> anterior, Operador<E> operador)
+	private No(E estado,No<E> anterior, Operador<E> operador,int prof, double custo)
 	{
 		this.estado = estado;
 		this.anterior = anterior;
 		this.operador = operador;
+		this.prof = prof;
+		this.custo = custo;
 	}
 
 	public E obterEstado() {
@@ -36,5 +47,29 @@ public class No<E> {
 	public Operador<E> obterOperador()
 	{
 		return operador;
+	}
+
+	public int getProf() {
+		return prof;
+	}
+
+	public void setProf(int prof) {
+		this.prof = prof;
+	}
+
+	public double getCusto() {
+		return custo;
+	}
+
+	public void setCusto(double custo) {
+		this.custo = custo;
+	}
+
+	@Override
+	public String toString()
+	{
+		return (operador!=null?"operador: " + operador:"") + "; estado: " + estado
+				+ "; prof:"+ prof;
+	
 	}
 }

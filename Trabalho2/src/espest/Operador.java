@@ -11,7 +11,11 @@ public abstract class Operador<E> implements OperadorGeral<E> {
 	public Set<Transicao<E>> aplicar(E estado)
 	{
 		Set<Transicao<E>> transicoes = new HashSet<Transicao<E>>(1);
-		transicoes.add(transitar(estado));
+		
+		Transicao<E> trans = transitar(estado);
+		if(trans != null)
+			transicoes.add(trans);
+		
 		return transicoes; 
 	}
 }
