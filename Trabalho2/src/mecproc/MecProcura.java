@@ -10,12 +10,15 @@ import espest.OperadorGeral;
 import espest.Transicao;
 
 public abstract class MecProcura<E> implements Comparator<No<E>> {
-	
-	protected PriorityQueue<No<E>> abertos; //change to PriorityQueue<No<E>> ???
+	protected PriorityQueue<No<E>> abertos;
+	private int nosProcessados;
+	private int nosCriados;
 	
 	public MecProcura()
 	{
 		this.abertos = new PriorityQueue<No<E>>(1,this);
+		this.nosProcessados = 0;
+		this.nosCriados = 0;
 	}
 	
 	public void iniciar()
@@ -59,17 +62,28 @@ public abstract class MecProcura<E> implements Comparator<No<E>> {
 	private void expandir(No<E> no, Collection<OperadorGeral<E>> operadores)
 	{
 		Set<Transicao<E>> transicoes;
-
+		nosProcessados += 1;
 		for(OperadorGeral<E> op : operadores){
 			transicoes = op.aplicar(no.obterEstado());
 			for(Transicao<E> t : transicoes){
+				nosCriados +=1;
 				juntar(new No<E>(t,no));
 			}
 		}
 	}
 	
-	private void juntar(No<E> no)
+	protected void juntar(No<E> no)
 	{
 		abertos.add(no);
+	}
+	
+	public int obterNosProcessados()
+	{
+		return nosProcessados;
+	}
+	
+	public int obterNosCriados()
+	{
+		return nosCriados;
 	}
 }

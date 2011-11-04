@@ -10,7 +10,7 @@ import localizacoes.EstadoLocalizacao;
 import localizacoes.ObjectivoLocalidade;
 import localizacoes.OperadorLocalizacao;
 import mecproc.MecProcura;
-import mecproc.MecProcuraLargura;
+import mecproc.MecProcuraProfundidadeIterativa;
 import mecproc.No;
 
 public class Teste {
@@ -39,11 +39,18 @@ public class Teste {
 		operadores.add(new OperadorLocalizacao(new EstadoLocalizacao("loc6"), 
 				new EstadoLocalizacao("loc3"), 15));
 
-		MecProcura<EstadoLocalizacao> mec = new MecProcuraLargura<>();
+		//MecProcura<EstadoLocalizacao> mec = new MecProcuraProfundidade<EstadoLocalizacao>();
+		//MecProcura<EstadoLocalizacao> mec = new MecProcuraProfundidadeLimitada<EstadoLocalizacao>(2);
+		MecProcura<EstadoLocalizacao> mec = new MecProcuraProfundidadeIterativa<EstadoLocalizacao>(10,1);
 		LinkedList<No<EstadoLocalizacao>> nos = mec.procurar(new EstadoLocalizacao("loc0"), 
 				new ObjectivoLocalidade("loc4"), operadores);
-
-		for(No<EstadoLocalizacao> no :  nos)
-			System.out.println(no.toString());
+		
+		System.out.println(String.format("Nós criados:%s, Nós processados:%s",mec.obterNosCriados(),mec.obterNosProcessados()));
+		
+		if(nos == null)
+			System.out.println("Sem solução.");
+		else
+			for(No<EstadoLocalizacao> no :  nos)
+				System.out.println(no.toString());
 	}
 }
