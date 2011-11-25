@@ -7,6 +7,7 @@ public class No<E> {
 	private E estado;
 	private No<E> anterior;
 	private Operador<E> operador;
+	private boolean aberto;
 	
 	/** Profundidade do nó na árvore de procura */
 	private int prof;
@@ -34,6 +35,7 @@ public class No<E> {
 		this.operador = operador;
 		this.prof = prof;
 		this.custo = custo;
+		this.aberto = true;
 	}
 
 	public E obterEstado() {
@@ -71,5 +73,13 @@ public class No<E> {
 		return (operador!=null?"operador: " + operador:"") + "; estado: " + estado
 				+ "; prof:"+ prof;
 	
+	}
+	
+	public boolean isAberto(){
+		return aberto;
+	}
+	
+	public void setAberto(boolean aberto){
+		this.aberto = aberto;
 	}
 }

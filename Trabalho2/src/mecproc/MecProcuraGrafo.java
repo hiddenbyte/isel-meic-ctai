@@ -1,25 +1,39 @@
 package mecproc;
 
-import java.util.ArrayList;
+
+import java.util.HashMap;
 
 public abstract class MecProcuraGrafo<E> extends MecProcura<E> {
-	private ArrayList<E> fechados; //TODO: change to a HashTable
+	private HashMap<E,No<E>> grafo;
 	
 	public MecProcuraGrafo()
 	{
-		fechados = new ArrayList<E>();
+		grafo = new HashMap<E,No<E>>();
 	}
 	
 	@Override
 	protected void juntar(No<E> no) {
-		boolean contidoEmFechados = fechados.contains(no);
-		boolean contidoEmAbertos = abertos.contains(no);
+		No<E> noGrafo = grafo.get(no.obterEstado());
 		
-		if(!contidoEmAbertos && !contidoEmFechados)
-			abertos.add(no);
-		
-		//TODO: slide 11, in Procura em Espaços de Estados - Parte 2.
-		
+		if(noGrafo == null){
+			abrir(no);
+		} else {
+			if(compare(no, noGrafo) < 0)
+			{
+				if(noGrafo.isAberto())
+				{
+					abertos.remove(noGrafo);
+				}
+				abrir(no);
+			}
+		}
+	}
+	
+	private void abrir(No<E> no)
+	{
 		super.juntar(no);
+		E estado = no.obterEstado();
+		grafo.put(estado, no);
+		no.setAberto(true);
 	}
 }
