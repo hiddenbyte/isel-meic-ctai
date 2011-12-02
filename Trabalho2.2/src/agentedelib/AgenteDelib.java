@@ -5,27 +5,32 @@ import agente.MemElem;
 import ambiente.Accao;
 import ambiente.Elemento;
 
-public abstract class AgenteDelib extends Agente {
+public abstract class AgenteDelib extends Agente
+{
 	protected MemElem crencas = new MemElem();
 	protected MemElem desejos = new MemElem();
 	protected MemElem intencoes = new MemElem();
-	protected OperadorAccaoGeral[] capacidades;
 	protected MemElem perGlobal;
-
+	
+	protected OperadorAccaoGeral[] capacidades;
+	
 	@Override
 	public void iniciar()
 	{
-		capacidades = new OperadorAccaoGeral[] {
-				new OperadorAccaoGeral ( crencas, Accao.Tipo.PEGAR),
-				new OperadorAccaoGeral ( crencas, Accao.Tipo.LARGAR),
-				new OperadorAccaoGeral ( crencas, Accao.Tipo.LARGAR)
+		capacidades = new OperadorAccaoGeral[]
+		{ 
+			new OperadorAccaoGeral(crencas, Accao.Tipo.PEGAR),
+			new OperadorAccaoGeral(crencas, Accao.Tipo.LARGAR),
+			new OperadorAccaoGeral(crencas, Accao.Tipo.MOVER) 
 		};
 	}
 
 	@Override
-	public void processar(){
+	public void processar()
+	{
 		actualizarCrencas();
-		if(reconsiderar()){
+		if (reconsiderar())
+		{
 			deliberar();
 			planear();
 		}
@@ -36,38 +41,42 @@ public abstract class AgenteDelib extends Agente {
 	{
 		perGlobal = getSensorPanoramico().detectar();
 	}
-	
-	//@Override
-	protected void deliberar() {
+
+	protected void deliberar()
+	{
 		gerarOpções();
 		seleccionarOpcoes();
 	}
 
-	private boolean reconsiderar() {
+	private boolean reconsiderar()
+	{
 		return crencas.alteracao();
 	}
 
-	private void actualizarCrencas() {
+	private void actualizarCrencas()
+	{
 		crencas.update(perGlobal);
 	}
 
-	protected void gerarOpções(){
+	protected void gerarOpções()
+	{
 		desejos.clear();
 
-		if(crencas.getAgente().isCarga())
-			desejos.putAll(crencas.get(Elemento.Tipo.BASE,false));
+		if (crencas.getAgente().isCarga())
+			desejos.putAll(crencas.get(Elemento.Tipo.BASE, false));
 		else
-			desejos.putAll(crencas.get(Elemento.Tipo.ALVO,false));
+			desejos.putAll(crencas.get(Elemento.Tipo.ALVO, false));
 	}
-	
-	protected void seleccionarOpcoes() 
-	{		
+
+	protected void seleccionarOpcoes()
+	{
 		intencoes.clear();
 		
 		Elemento melhorOpcao = desejos.getProx(crencas.getAgente().getPosicao());
-		if(melhorOpcao != null)
+		
+		if (melhorOpcao != null)
 			intencoes.put(melhorOpcao);
 	}
-	
+
 	protected abstract void planear();
 }

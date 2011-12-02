@@ -1,23 +1,41 @@
 package agentedelib;
 
+import java.util.HashSet;
 import java.util.Set;
 
-import espest.Transicao;
 import agente.MemElem;
-import ambiente.Accao.Tipo;
+import ambiente.Accao;
 import ambiente.Coordenada;
+import espest.OperadorGeral;
+import espest.Transicao;
 
-public class OperadorAccaoGeral {
+public class OperadorAccaoGeral implements OperadorGeral<Coordenada>
+{
 	protected MemElem crencas;
-	protected Tipo accao;
-	
-	public OperadorAccaoGeral(MemElem crencas, Tipo accao) {
-		this.accao = accao;
+	protected Accao.Tipo tipoDeAccao;
+
+	public OperadorAccaoGeral(MemElem crencas, Accao.Tipo tipoDeAccao)
+	{
+		this.tipoDeAccao = tipoDeAccao;
 		this.crencas = crencas;
 	}
 	
-	public Set<Transicao<Coordenada>> aplicar(Coordenada estado){
-		return null;
-	}
+	@Override
+	public Set<Transicao<Coordenada>> aplicar(Coordenada estado)
+	{
+		Set<Transicao<Coordenada>> transicoes = new HashSet<>();
+		Accao[] accoes = Accao.gerarAccoes(tipoDeAccao);
 
+		for (Accao accao : accoes)
+		{
+			OperadorAccao operadorAccao = new OperadorAccao(crencas, accao);
+			
+			Transicao<Coordenada> transicao = operadorAccao.transitar(estado);
+			
+			if (transicao != null)
+				transicoes.add(transicao);
+		}
+
+		return transicoes;
+	}
 }
