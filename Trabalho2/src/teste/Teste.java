@@ -4,23 +4,28 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
 
-import puzzle.Puzzle;
+import puzzle.*;
+import puzzle.Puzzle.Movimento;
 
-import eightPuzzle.ObjectivoPuzzle;
-import eightPuzzle.OperadorEightPuzzle;
+import eigthpuzzle.ObjectivoPuzzle;
+import eigthpuzzle.OperadorPuzzle;
 import espest.*;
 
 import localizacoes.EstadoLocalizacao;
 import localizacoes.ObjectivoLocalidade;
 import localizacoes.OperadorLocalizacao;
 import mecproc.MecProcura;
+import mecproc.MecProcuraAStar;
+import mecproc.MecProcuraGrafoLargura;
 import mecproc.MecProcuraLargura;
 import mecproc.MecProcuraProfundidade;
 import mecproc.MecProcuraProfundidadeIterativa;
+import mecproc.MecProcuraSofrega;
 import mecproc.No;
 
 public class Teste {
 	public static void main(String[] args) {
+		
 		/*
 		Collection<OperadorGeral<EstadoLocalizacao>> operadores = new ArrayList<OperadorGeral<EstadoLocalizacao>>();
 		operadores.add(new OperadorLocalizacao(new EstadoLocalizacao("loc0"), 
@@ -54,33 +59,52 @@ public class Teste {
 		
 		System.out.println(String.format("Nós criados:%s, Nós processados:%s",mec.obterNosCriados(),mec.obterNosProcessados()));
 		
-		if(nos == null)
-			System.out.println("Sem solução.");
-		else
-			for(No<EstadoLocalizacao> no :  nos)
-				System.out.println(no.toString());
 		*/
 		
 		Collection<OperadorGeral<Puzzle>> operadores = new ArrayList<OperadorGeral<Puzzle>>();
-		operadores.add(new OperadorEightPuzzle(Puzzle.Movimento.BAIXO));
-		operadores.add(new OperadorEightPuzzle(Puzzle.Movimento.CIMA));
-		operadores.add(new OperadorEightPuzzle(Puzzle.Movimento.DIR));
-		operadores.add(new OperadorEightPuzzle(Puzzle.Movimento.ESQ));
+		operadores.add(new OperadorPuzzle(Movimento.BAIXO));
+		operadores.add(new OperadorPuzzle(Movimento.CIMA));
+		operadores.add(new OperadorPuzzle(Movimento.DIR));
+		operadores.add(new OperadorPuzzle(Movimento.ESQ));
 		
-		int[][] estadoInicial = new int[][] {{1,2,3},{8,4,5},{6,7,0}};
-		int[][] estadoFinal = new int[][] {{1,2,3},{4,5,6},{7,8,0}};
+		Puzzle estadoInicial = new Puzzle(new int[][]{{1,2,3},{8,4,5},{6,7,0}});
+		//Puzzle estadoInicial = new Puzzle(new int[][]{{8,4,5},{6,1,2},{3,7,0}});
+		Puzzle estadoFinal = new Puzzle(new int[][]{{1,2,3},{4,5,6},{7,8,0}});
 		
-		System.out.println("início de procura.");
+		MecProcura<Puzzle> mec;
+		LinkedList<No<Puzzle>> nos;
+		System.out.println("		Custo Solução	Complex Espacial	Complex Temporal");
+		mec = new MecProcuraLargura<Puzzle>();
+		nos = mec.procurar(estadoInicial, new ObjectivoPuzzle(estadoFinal), operadores);
+		System.out.println("Largura	" + "	" + mec.imprimirEstatisticas());
+		//mec = new MecProcuraProfundidade<Puzzle>();
+		//nos = mec.procurar(estadoInicial, new ObjectivoPuzzle(estadoFinal), operadores);
+		//System.out.println("Profundidade" + "		" + mec.imprimirEstatisticas());
+		mec = new MecProcuraProfundidadeIterativa<Puzzle>(15,1);
+		nos = mec.procurar(estadoInicial, new ObjectivoPuzzle(estadoFinal), operadores);
+		System.out.println("Iteractivo" + "	" + mec.imprimirEstatisticas());
+		mec = new MecProcuraGrafoLargura<Puzzle>();
+		nos = mec.procurar(estadoInicial, new ObjectivoPuzzle(estadoFinal), operadores);
+		System.out.println("G_Largura" + "	" + mec.imprimirEstatisticas());
+		mec = new MecProcuraSofrega<Puzzle>();
+		nos = mec.procurar(estadoInicial, new ObjectivoPuzzle(estadoFinal), operadores);
+		System.out.println("Sofrega	" + "	" + mec.imprimirEstatisticas());
+		mec = new MecProcuraAStar<Puzzle>();
+		nos = mec.procurar(estadoInicial, new ObjectivoPuzzle(estadoFinal), operadores);
+		System.out.println("Astar	" + "	" + mec.imprimirEstatisticas());
 		
-		MecProcura<Puzzle> mec = new MecProcuraLargura<Puzzle>();
-		LinkedList<No<Puzzle>> nos = mec.procurar(new Puzzle(estadoInicial), new ObjectivoPuzzle(new Puzzle(estadoFinal)), operadores);
 		
-		System.out.println("fim de procura.");
+		//MecProcura<Puzzle> mec = new MecProcuraGrafoLargura<Puzzle>();
+		//MecProcura<Puzzle> mec = new MecProcuraAStar<Puzzle>();
+		/*LinkedList<No<Puzzle>> nos = mec.procurar(estadoInicial, 
+				new ObjectivoPuzzle(estadoFinal), operadores);
+		
+		System.out.println("fim de procura");
 		
 		if(nos == null)
 			System.out.println("Sem solução.");
 		else
 			for(No<Puzzle> no :  nos)
-				System.out.println(no.toString());
+				System.out.println(no.toString());*/
 	}
 }

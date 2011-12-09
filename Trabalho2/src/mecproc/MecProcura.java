@@ -11,14 +11,16 @@ import espest.Transicao;
 
 public abstract class MecProcura<E> implements Comparator<No<E>> {
 	protected PriorityQueue<No<E>> abertos;
-	private int nosProcessados;
-	private int nosCriados;
+	protected int nosMantidosEmMemoria;
+	protected int nosProcessados;
+	protected int nosDaSolucao;
+	
 	
 	public MecProcura()
 	{
 		this.abertos = new PriorityQueue<No<E>>(1,this);
+		this.nosMantidosEmMemoria = 0;
 		this.nosProcessados = 0;
-		this.nosCriados = 0;
 	}
 	
 	public void iniciar()
@@ -37,6 +39,7 @@ public abstract class MecProcura<E> implements Comparator<No<E>> {
 		while(!abertos.isEmpty()){
 			
 			noActual = abertos.remove();
+			++nosProcessados;
 			
 			if(objectivo.satisfeito(noActual.obterEstado()) )
 				return solucao(noActual);
@@ -56,17 +59,17 @@ public abstract class MecProcura<E> implements Comparator<No<E>> {
 			noActual=noActual.obterAnterior();
 		}while(noActual!=null);
 		
+		nosDaSolucao = resultado.size();
+		
 		return resultado;
 	}
 
 	private void expandir(No<E> no, Collection<OperadorGeral<E>> operadores)
 	{
 		Set<Transicao<E>> transicoes;
-		nosProcessados += 1;
 		for(OperadorGeral<E> op : operadores){
 			transicoes = op.aplicar(no.obterEstado());
 			for(Transicao<E> t : transicoes){
-				nosCriados +=1;
 				juntar(new No<E>(t,no));
 			}
 		}
@@ -75,15 +78,12 @@ public abstract class MecProcura<E> implements Comparator<No<E>> {
 	protected void juntar(No<E> no)
 	{
 		abertos.add(no);
+		if(abertos.size()>nosMantidosEmMemoria)
+			nosMantidosEmMemoria=abertos.size();
 	}
 	
-	public int obterNosProcessados()
-	{
-		return nosProcessados;
+	public String imprimirEstatisticas(){
+		return nosDaSolucao + "		" + nosMantidosEmMemoria + "			" + nosProcessados;
 	}
-	
-	public int obterNosCriados()
-	{
-		return nosCriados;
-	}
+
 }

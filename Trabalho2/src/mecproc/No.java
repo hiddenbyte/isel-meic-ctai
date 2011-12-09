@@ -35,7 +35,7 @@ public class No<E> {
 		this.operador = operador;
 		this.prof = prof;
 		this.custo = custo;
-		this.aberto = true;
+		this.aberto = false;
 	}
 
 	public E obterEstado() {
@@ -80,6 +80,6 @@ public class No<E> {
 	}
 	
 	public void setAberto(boolean aberto){
-		this.aberto = aberto;
+		this.aberto=aberto;
 	}
 }
