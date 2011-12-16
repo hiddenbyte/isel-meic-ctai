@@ -1,0 +1,29 @@
+package agentedelib;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import mecproc.MecProcura;
+import mecproc.MecProcuraAStar;
+import mecproc.No;
+import ambiente.Accao;
+import ambiente.Coordenada;
+
+public class AgenteDelibConcreto extends AgenteDelib{
+
+	@Override
+	protected void planear() {
+		
+		plano = new LinkedList<Accao>();
+		MecProcura<Coordenada> mec = new MecProcuraAStar<Coordenada>();
+		List<No<Coordenada>>nos = mec.procurar(crencas.getAgente().getPosicao(), new ObjectivoNoMapa(intencoes.getFirst().getPosicao()), capacidades);
+		nos.remove(0);
+		
+		for(No<Coordenada> no : nos){
+			OperadorAccao operador = (OperadorAccao)(no.obterOperador());
+			//if(operador != null)
+				plano.add(operador.getAccao());
+		}
+	}
+
+}

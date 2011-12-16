@@ -1,0 +1,15 @@
+package agentedelib;
+
+import mecproc.MecProcuraAStar;
+import eigthpuzzle.ObjectivoPuzzle;
+
+public class AgenteDelibConcreto extends AgenteDelib{
+
+	@Override
+	protected void planear() {
+		
+		mec = new MecProcuraAStar<Puzzle>();
+		nos = mec.procurar(estadoInicial, new ObjectivoPuzzle(estadoFinal), operadores);
+	}
+
+}

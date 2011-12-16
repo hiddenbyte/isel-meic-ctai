@@ -1,7 +1,5 @@
 package eigthpuzzle;
 
-import mecproc.Objectivo;
-import mecproc.ComHeuristica;
 import mecproc.ObjectivoComHeuristica;
 import puzzle.Puzzle;
 

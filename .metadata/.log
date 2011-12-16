@@ -1,0 +1,10 @@
+!SESSION 2011-12-13 16:57:38.590 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.7.0_01
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_PT
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ui 4 4 2011-12-15 03:45:04.746
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.

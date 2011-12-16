@@ -1,0 +1,12 @@
+
+public class MecProcPDM{
+
+	public void planearPolitica(){}
+	private void iterarUtilidade(){}
+	private void utilTrans(){}
+	private void maxTrans(){}
+	private void gerarPolitica(){}
+	
+
+
+}

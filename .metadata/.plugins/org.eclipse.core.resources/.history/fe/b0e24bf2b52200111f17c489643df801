@@ -1,0 +1,18 @@
+import mecproc.MecProcura;
+
+
+public class MecProcPDM extends MecProcura{
+
+	public void planearPolitica(){}
+	private void iterarUtilidade(){}
+	private void utilTrans(){}
+	private void maxTrans(){}
+	private void gerarPolitica(){}
+	
+	@Override
+	public int compare(Object arg0, Object arg1) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -23,14 +23,16 @@ public class OperadorAccaoGeral implements OperadorGeral<Coordenada>
 	@Override
 	public Set<Transicao<Coordenada>> aplicar(Coordenada estado)
 	{
-		Set<Transicao<Coordenada>> transicoes = new HashSet<>();
+		Set<Transicao<Coordenada>> transicoes = new HashSet<Transicao<Coordenada>>();
 		Accao[] accoes = Accao.gerarAccoes(tipoDeAccao);
+		OperadorAccao operadorAccao;
+		Transicao<Coordenada> transicao;
 
 		for (Accao accao : accoes)
 		{
-			OperadorAccao operadorAccao = new OperadorAccao(crencas, accao);
+			operadorAccao = new OperadorAccao(crencas, accao);
 			
-			Transicao<Coordenada> transicao = operadorAccao.transitar(estado);
+			transicao = operadorAccao.transitar(estado);
 			
 			if (transicao != null)
 				transicoes.add(transicao);

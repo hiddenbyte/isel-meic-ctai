@@ -68,18 +68,18 @@ public class Teste {
 		operadores.add(new OperadorPuzzle(Movimento.ESQ));
 		
 		Puzzle estadoInicial = new Puzzle(new int[][]{{1,2,3},{8,4,5},{6,7,0}});
-		//Puzzle estadoInicial = new Puzzle(new int[][]{{8,4,5},{6,1,2},{3,7,0}});
+//		Puzzle estadoInicial = new Puzzle(new int[][]{{8,4,5},{6,1,2},{3,7,0}});
 		Puzzle estadoFinal = new Puzzle(new int[][]{{1,2,3},{4,5,6},{7,8,0}});
 		
 		MecProcura<Puzzle> mec;
 		LinkedList<No<Puzzle>> nos;
-		System.out.println("		Custo Solução	Complex Espacial	Complex Temporal");
-		mec = new MecProcuraLargura<Puzzle>();
-		nos = mec.procurar(estadoInicial, new ObjectivoPuzzle(estadoFinal), operadores);
-		System.out.println("Largura	" + "	" + mec.imprimirEstatisticas());
-		//mec = new MecProcuraProfundidade<Puzzle>();
-		//nos = mec.procurar(estadoInicial, new ObjectivoPuzzle(estadoFinal), operadores);
-		//System.out.println("Profundidade" + "		" + mec.imprimirEstatisticas());
+//		System.out.println("		Custo Solução	Complex Espacial	Complex Temporal   ");
+//		mec = new MecProcuraLargura<Puzzle>();
+//		nos = mec.procurar(estadoInicial, new ObjectivoPuzzle(estadoFinal), operadores);
+//		System.out.println("Largura	" + "	" + mec.imprimirEstatisticas());
+//		mec = new MecProcuraProfundidade<Puzzle>();
+//		nos = mec.procurar(estadoInicial, new ObjectivoPuzzle(estadoFinal), operadores);
+//		System.out.println("Profundidade" + "		" + mec.imprimirEstatisticas());
 		mec = new MecProcuraProfundidadeIterativa<Puzzle>(15,1);
 		nos = mec.procurar(estadoInicial, new ObjectivoPuzzle(estadoFinal), operadores);
 		System.out.println("Iteractivo" + "	" + mec.imprimirEstatisticas());

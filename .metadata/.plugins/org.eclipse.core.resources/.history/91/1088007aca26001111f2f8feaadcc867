@@ -1,0 +1,25 @@
+package agentedelib;
+
+import mecproc.Objectivo;
+import ambiente.Coordenada;
+
+public class ObjectivoNoMapa implements Objectivo{
+	
+	private Coordenada coordenada;
+	
+	public ObjectivoNoMapa(Coordenada c){
+		
+		coordenada = c;
+	}
+
+	@Override
+	public boolean satisfeito(Coordenada c) {
+		return coordenada.equals(c);
+	}
+
+	@Override
+	public double getHeuristica(Puzzle estadoActual) {
+		return estadoActual.distManhattan(objectivo);
+	}
+
+}

@@ -18,6 +18,7 @@ public class OperadorAccao extends Operador<Coordenada>
 		this.crencas = crencas;
 	}
 
+	@Override
 	public Transicao<Coordenada> transitar(Coordenada estado)
 	{
 		boolean carga = crencas.getAgente().isCarga();

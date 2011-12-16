@@ -1,0 +1,17 @@
+package agentedelib;
+
+import ambiente.Coordenada;
+import mecproc.MecProcura;
+import mecproc.MecProcuraAStar;
+import eigthpuzzle.ObjectivoPuzzle;
+
+public class AgenteDelibConcreto extends AgenteDelib{
+
+	@Override
+	protected void planear() {
+		
+		MecProcura mec = new MecProcuraAStar<Coordenada>();
+		List<No<Coordenada>>nos = mec.procurar(crencas.getAgente().getPosicao(), new ObjectivoNoMapa(intencoes.getFirst().getPosicao()), capacidades);
+	}
+
+}

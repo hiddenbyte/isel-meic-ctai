@@ -1,2 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="espest.Transicao"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="mecproc.MecProcura"/>
+<fullyQualifiedTypeName name="mecproc.Objectivo"/>
+<fullyQualifiedTypeName name="espest.OperadorGeral"/>
+<fullyQualifiedTypeName name="ambiente.Coordenada"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="ambiente.Accao"/>
+<fullyQualifiedTypeName name="agentedelib.AgenteDelib"/>
+<fullyQualifiedTypeName name="agentedelib.AgenteDelibConcreto"/>
+<fullyQualifiedTypeName name="mecproc.MecProcuraGrafo"/>
+<fullyQualifiedTypeName name="mecproc.MecProcuraGrafoProfundidade"/>
+</qualifiedTypeNameHistroy>

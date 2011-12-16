@@ -1,0 +1,244 @@
+Dez 15, 2011 3:37:19 AM simulador.Simulador processarErro
+SEVERE: java.io.FileNotFoundException: amb2.das (O sistema não conseguiu localizar o ficheiro especificado)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileReader.<init>(Unknown Source)
+	at simulador.Simulador.obterDefAmb(Simulador.java:224)
+	at simulador.Simulador.iniciar(Simulador.java:149)
+	at agentedelib.Teste.main(Teste.java:14)
+
+Dez 15, 2011 3:40:30 AM simulador.Simulador processarErro
+SEVERE: java.io.FileNotFoundException: amb2.das (O sistema não conseguiu localizar o ficheiro especificado)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileReader.<init>(Unknown Source)
+	at simulador.Simulador.obterDefAmb(Simulador.java:224)
+	at simulador.Simulador.iniciar(Simulador.java:149)
+	at agentedelib.Teste.main(Teste.java:14)
+
+Dez 15, 2011 3:41:28 AM simulador.Simulador processarErro
+SEVERE: java.io.FileNotFoundException: amb2.das (O sistema não conseguiu localizar o ficheiro especificado)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileReader.<init>(Unknown Source)
+	at simulador.Simulador.obterDefAmb(Simulador.java:224)
+	at simulador.Simulador.iniciar(Simulador.java:149)
+	at agentedelib.Teste.main(Teste.java:14)
+
+Dez 15, 2011 3:43:19 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:23)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 3:43:48 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:23)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 3:44:17 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:23)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 3:44:23 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:23)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 3:45:50 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:23)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 3:47:23 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:23)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 3:47:59 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:23)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 3:48:31 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:23)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 3:53:09 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:19)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 3:58:01 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:19)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 3:58:15 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:19)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 3:58:50 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:19)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 3:58:55 AM simulador.Simulador processarErro
+SEVERE: java.io.FileNotFoundException: C:\libs\amb\amb3v.das (O sistema não conseguiu localizar o ficheiro especificado)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileReader.<init>(Unknown Source)
+	at simulador.Simulador.obterDefAmb(Simulador.java:224)
+	at simulador.Simulador.iniciar(Simulador.java:149)
+	at agentedelib.Teste.main(Teste.java:14)
+
+Dez 15, 2011 3:59:27 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:19)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 3:59:58 AM simulador.Simulador processarErro
+SEVERE: java.io.FileNotFoundException: C:\libs\amb\amb4.das (O sistema não conseguiu localizar o ficheiro especificado)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileReader.<init>(Unknown Source)
+	at simulador.Simulador.obterDefAmb(Simulador.java:224)
+	at simulador.Simulador.iniciar(Simulador.java:149)
+	at agentedelib.Teste.main(Teste.java:14)
+
+Dez 15, 2011 4:00:09 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:19)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 4:00:45 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:19)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 4:00:59 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:19)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 4:01:56 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:19)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 4:02:04 AM simulador.Simulador processarErro
+SEVERE: java.io.FileNotFoundException: C:\libs\amb\amb8.das (O sistema não conseguiu localizar o ficheiro especificado)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileReader.<init>(Unknown Source)
+	at simulador.Simulador.obterDefAmb(Simulador.java:224)
+	at simulador.Simulador.iniciar(Simulador.java:149)
+	at agentedelib.Teste.main(Teste.java:14)
+
+Dez 15, 2011 4:03:14 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:19)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 4:03:24 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:19)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 15, 2011 4:03:38 AM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:19)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:46)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 16, 2011 7:07:07 PM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:24)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:52)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 16, 2011 7:13:14 PM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:24)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:55)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
+Dez 16, 2011 7:14:15 PM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibConcreto.planear(AgenteDelibConcreto.java:24)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:55)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:15)
+
