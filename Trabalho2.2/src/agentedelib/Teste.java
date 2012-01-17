@@ -2,6 +2,8 @@ package agentedelib;
 
 import simulador.Simulador;
 import agente.IAgente;
+import mecproc.MecProcuraAStar;
+import ambiente.Coordenada;
 
 public class Teste {
 
@@ -9,7 +11,7 @@ public class Teste {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		IAgente agent = new AgenteDelibConcreto(5); //relatorio
+		IAgente agent = new AgenteDelibPEE(new MecProcuraAStar<Coordenada>()); //relatorio
 		Simulador simul = new Simulador();
 		simul.iniciar(agent, defAmb, 70, true);
 		simul.executar();

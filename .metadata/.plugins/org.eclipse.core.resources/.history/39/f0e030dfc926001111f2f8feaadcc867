@@ -1,7 +1,0 @@
-package agentedelib;
-
-import mecproc.Objectivo;;
-
-public class ObjectivoNoMapa extends Objectivo{
-
-}

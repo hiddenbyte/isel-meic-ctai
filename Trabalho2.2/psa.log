@@ -242,3 +242,67 @@ SEVERE: java.lang.NullPointerException
 	at simulador.Simulador.executar(Simulador.java:268)
 	at agentedelib.Teste.main(Teste.java:15)
 
+Dez 16, 2011 9:11:09 PM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibPEE.planear(AgenteDelibPEE.java:27)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:55)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:17)
+
+Dez 16, 2011 9:11:14 PM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibPEE.planear(AgenteDelibPEE.java:27)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:55)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:17)
+
+Dez 16, 2011 9:11:26 PM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibPEE.planear(AgenteDelibPEE.java:27)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:55)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:17)
+
+Dez 16, 2011 9:12:27 PM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibPEE.planear(AgenteDelibPEE.java:27)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:55)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:17)
+
+Dez 16, 2011 9:23:30 PM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibPEE.planear(AgenteDelibPEE.java:28)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:55)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:17)
+
+Dez 16, 2011 9:23:56 PM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibPEE.planear(AgenteDelibPEE.java:28)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:55)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:17)
+
+Dez 16, 2011 9:26:06 PM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibPEE.planear(AgenteDelibPEE.java:27)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:55)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:17)
+
+Dez 16, 2011 9:26:44 PM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at agentedelib.AgenteDelibPEE.planear(AgenteDelibPEE.java:27)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:55)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at agentedelib.Teste.main(Teste.java:17)
+

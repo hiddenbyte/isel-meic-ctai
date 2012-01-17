@@ -1,0 +1,66 @@
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+
+import espest.Operador;
+import espest.OperadorGeral;
+import espest.Transicao;
+import agentedelib.AgenteDelib;
+import agentedelib.OperadorAccao;
+import ambiente.Accao;
+
+
+public class AgenteDelibPDM<Coordenada> extends AgenteDelib<Coordenada> implements ModeloPDM<Coordenada>{
+	
+	private final int RMAX = 1;
+	private HashMap<Coordenada, Operador<Coordenada>> politica;
+	private MecProcPDM<Coordenada> mecproc;
+	
+	public AgenteDelibPDM (MecProcPDM<Coordenada> mecproc){
+		
+		mecproc = new MecProcPDM<Coordenada>(1,1,this);
+	}
+	
+	@Override
+	public double t(Transicao<Coordenada> trans) {
+		//para modelo determinista.
+		return 1;
+	}
+	@Override
+	public double r(Transicao<Coordenada> trans) {
+		
+		if(trans.obterEstadoSuc().equals(intencoes.getFirst().getPosicao()))
+			return RMAX;
+		return -trans.getCusto();
+	}
+	@Override
+	public Set<Coordenada> s() {
+		
+		return getAmb().getPosicoes();
+	}
+	@Override
+	public Set<OperadorGeral<Coordenada>> o(Coordenada s) {
+		
+		return new HashSet<OperadorGeral<Coordenada>>(capacidades);
+	}
+	
+	Coordenada posActual;
+	
+	@Override
+	public void agir() {
+		
+		posActual = crencas.getAgente().getPosicao();
+		if(!posActual.equals(intencoes.getFirst().getPosicao())){
+			Operador<Coordenada> oper = politica.get(posActual);
+			Accao a = ((OperadorAccao)oper).getAccao();
+			getActuador().actuar(a);
+		}
+	}
+	
+	@Override
+	protected void planear() {
+		
+		politica = mecproc.planearPolitica();
+		
+	}
+}

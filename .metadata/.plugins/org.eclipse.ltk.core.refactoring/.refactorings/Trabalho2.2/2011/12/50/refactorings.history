@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;agentedelib.AgenteDelibConcreto&apos; to &apos;AgenteDelibPEE&apos;&#x0D;&#x0A;- Original project: &apos;Trabalho2.2&apos;&#x0D;&#x0A;- Original element: &apos;agentedelib.AgenteDelibConcreto&apos;&#x0D;&#x0A;- Renamed element: &apos;agentedelib.AgenteDelibPEE&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;AgenteDelibConcreto&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;agentedelib{AgenteDelibConcreto.java[AgenteDelibConcreto" matchStrategy="1" name="AgenteDelibPEE" qualified="false" references="true" similarDeclarations="false" stamp="1324068806893" textual="false" version="1.0"/>
+</session>

@@ -5,8 +5,9 @@ import java.util.HashMap;
 public abstract class MecProcuraGrafo<E> extends MecProcura<E> {
 	private HashMap<E,No<E>> grafo;
 
-	public MecProcuraGrafo()
-	{
+	@Override
+	public void iniciar(){
+		super.iniciar();
 		grafo = new HashMap<E,No<E>>();
 	}
 

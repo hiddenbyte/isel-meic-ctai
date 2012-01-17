@@ -1,6 +1,0 @@
-import mecproc.MecProcura;
-
-
-public class MecProcPDM extends MecProcura{
-
-}

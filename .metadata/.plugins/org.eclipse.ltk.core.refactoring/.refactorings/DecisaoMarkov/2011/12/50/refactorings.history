@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;MecProcPDM.java&apos; to &apos;AgenteDelibPDM.java&apos;&#x0D;&#x0A;- Original project: &apos;DecisaoMarkov&apos;&#x0D;&#x0A;- Original element: &apos;MecProcPDM.java&apos;&#x0D;&#x0A;- Renamed element: &apos;AgenteDelibPDM.java&apos;" description="Rename compilation unit &apos;MecProcPDM.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;{MecProcPDM.java" name="AgenteDelibPDM.java" references="false" stamp="1324072109026" version="1.0"/>
+</session>

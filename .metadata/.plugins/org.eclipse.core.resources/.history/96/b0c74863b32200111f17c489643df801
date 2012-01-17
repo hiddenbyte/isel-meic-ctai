@@ -1,6 +1,0 @@
-
-public interface ModeloPDM<E> {
-	
-	double t(Transicao<E> trans);
-
-}
