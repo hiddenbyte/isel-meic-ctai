@@ -17,4 +17,5 @@
 <fullyQualifiedTypeName name="agentedelib.AgenteDelib"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="espest.OperadorGeral"/>
+<fullyQualifiedTypeName name="java.text.DecimalFormat"/>
 </qualifiedTypeNameHistroy>

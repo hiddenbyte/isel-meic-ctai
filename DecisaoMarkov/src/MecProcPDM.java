@@ -60,6 +60,8 @@ public class MecProcPDM<E> {
 				}
 			}
 			
+			//modelo.pintar();
+			
 		}while(delta > (epsilon*(1-gamma)/gamma));
 		
 	}
