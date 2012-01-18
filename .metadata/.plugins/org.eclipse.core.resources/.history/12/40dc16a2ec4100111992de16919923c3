@@ -15,13 +15,14 @@ import espest.Transicao;
 
 public class AgenteDelibPDM extends AgenteDelib<Coordenada> implements ModeloPDM<Coordenada>{
 	
-	private final int RMAX = 10;
+	private final int RMAX;
 	private HashMap<Coordenada, Operador<Coordenada>> politica;
 	private MecProcPDM<Coordenada> mecproc;
 	
-	public AgenteDelibPDM (){
+	public AgenteDelibPDM (int rmax){
 		
-		mecproc = new MecProcPDM<Coordenada>(0.1,0.3,this);
+		RMAX = rmax;
+		mecproc = new MecProcPDM<Coordenada>(0.1,0.95,this);
 	}
 	
 	@Override
@@ -65,5 +66,41 @@ public class AgenteDelibPDM extends AgenteDelib<Coordenada> implements ModeloPDM
 		
 		politica = mecproc.planearPolitica();
 		
+		pintar();
+		
 	}
+	
+	public void pintar() {
+		
+		
+		//getConsola().limpar();
+		int n= (int)(Math.sqrt(mecproc.u.size()));
+		double[][] map = new double[n][n];
+		
+		String line = "";
+		
+		for(Coordenada c : s()){
+			map[c.getX()][c.getY()] = mecproc.u.get(c);
+		}
+		
+		for(int i = 0 ; i<n ; i++){
+			for(int j = 0; j<n ; j++){
+				line += round2(map[j][i]) + "\t";
+			}
+			System.out.println(line);
+			line = "";
+		}
+		System.out.println();
+		System.out.println("----------------------------------------------------------");
+		System.out.println();
+		
+	}
+	
+	public static double round2(double num) {
+		double result = num * 100;
+		result = Math.round(result);
+		result = result / 100;
+		return result;
+	}
+	
 }

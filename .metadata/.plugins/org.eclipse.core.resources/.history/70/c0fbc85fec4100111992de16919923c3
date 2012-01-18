@@ -15,14 +15,13 @@ import espest.Transicao;
 
 public class AgenteDelibPDM extends AgenteDelib<Coordenada> implements ModeloPDM<Coordenada>{
 	
-	private final int RMAX;
+	private final int RMAX = 100000;
 	private HashMap<Coordenada, Operador<Coordenada>> politica;
 	private MecProcPDM<Coordenada> mecproc;
 	
-	public AgenteDelibPDM (int rmax, double epsilon, double gamma){
+	public AgenteDelibPDM (){
 		
-		RMAX = rmax;
-		mecproc = new MecProcPDM<Coordenada>(epsilon, gamma, this);
+		mecproc = new MecProcPDM<Coordenada>(0.1,0.95,this);
 	}
 	
 	@Override

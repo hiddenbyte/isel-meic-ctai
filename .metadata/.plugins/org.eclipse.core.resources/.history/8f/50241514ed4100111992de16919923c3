@@ -8,7 +8,7 @@ public class Teste {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		IAgente agent = new AgenteDelibPDM(100000, 0.1, 0.95); 
+		IAgente agent = new AgenteDelibPDM(10000, 0.1, 0.95); 
 		Simulador simul = new Simulador();
 		simul.iniciar(agent, defAmb, 70, true);
 		simul.executar();
