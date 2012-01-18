@@ -345,3 +345,56 @@ SEVERE: java.lang.NullPointerException
 	at simulador.Simulador.executar(Simulador.java:268)
 	at Teste.main(Teste.java:14)
 
+Jan 18, 2012 4:09:24 PM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at AgenteDelibPDM.r(AgenteDelibPDM.java:35)
+	at MecProcPDM.utilTrans(MecProcPDM.java:78)
+	at MecProcPDM.maxTrans(MecProcPDM.java:91)
+	at MecProcPDM.iterarUtilidade(MecProcPDM.java:52)
+	at MecProcPDM.planearPolitica(MecProcPDM.java:29)
+	at AgenteDelibPDM.planear(AgenteDelibPDM.java:66)
+	at agentedelib.AgenteDelib.processar(AgenteDelib.java:54)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at Teste.main(Teste.java:14)
+
+Jan 18, 2012 6:55:11 PM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at aprendQ.MecAprendQ.maxAccao(MecAprendQ.java:61)
+	at aprendQ.MecAprendQ.selAccao(MecAprendQ.java:28)
+	at aprendQ.AgenteAprend.processar(AgenteAprend.java:56)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at aprendQ.AprendQTest.Iniciar(AprendQTest.java:15)
+	at Teste.main(Teste.java:19)
+
+Jan 18, 2012 6:57:15 PM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at aprendQ.MecAprendQ.maxAccao(MecAprendQ.java:61)
+	at aprendQ.MecAprendQ.selAccao(MecAprendQ.java:28)
+	at aprendQ.AgenteAprend.processar(AgenteAprend.java:56)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at aprendQ.AprendQTest.Iniciar(AprendQTest.java:15)
+	at Teste.main(Teste.java:19)
+
+Jan 18, 2012 6:57:21 PM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at aprendQ.MecAprendQ.maxAccao(MecAprendQ.java:61)
+	at aprendQ.MecAprendQ.selAccao(MecAprendQ.java:28)
+	at aprendQ.AgenteAprend.processar(AgenteAprend.java:56)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at aprendQ.AprendQTest.Iniciar(AprendQTest.java:15)
+	at Teste.main(Teste.java:19)
+
+Jan 18, 2012 7:07:05 PM simulador.Simulador processarErro
+SEVERE: java.lang.NullPointerException
+	at aprendQ.MecAprendQ.maxAccao(MecAprendQ.java:72)
+	at aprendQ.MecAprendQ.selAccao(MecAprendQ.java:39)
+	at aprendQ.AgenteAprend.processar(AgenteAprend.java:56)
+	at simulador.Simulador.passoExec(Simulador.java:300)
+	at simulador.Simulador.executar(Simulador.java:268)
+	at aprendQ.AprendQTest.Iniciar(AprendQTest.java:15)
+	at Teste.main(Teste.java:19)
+

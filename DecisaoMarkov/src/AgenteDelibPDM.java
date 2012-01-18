@@ -20,7 +20,7 @@ public class AgenteDelibPDM extends AgenteDelib<Coordenada> implements ModeloPDM
 	private MecProcPDM<Coordenada> mecproc;
 	
 	public AgenteDelibPDM (){
-		
+
 		mecproc = new MecProcPDM<Coordenada>(0.1,0.95,this);
 	}
 	
