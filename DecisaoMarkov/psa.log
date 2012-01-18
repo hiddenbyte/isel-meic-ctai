@@ -345,59 +345,19 @@ SEVERE: java.lang.NullPointerException
 	at simulador.Simulador.executar(Simulador.java:268)
 	at Teste.main(Teste.java:14)
 
-Jan 18, 2012 3:58:07 PM simulador.Simulador processarErro
 SEVERE: java.lang.NullPointerException
-	at AgenteDelibPDM.r(AgenteDelibPDM.java:36)
 	at MecProcPDM.utilTrans(MecProcPDM.java:78)
 	at MecProcPDM.maxTrans(MecProcPDM.java:91)
 	at MecProcPDM.iterarUtilidade(MecProcPDM.java:52)
 	at MecProcPDM.planearPolitica(MecProcPDM.java:29)
-	at AgenteDelibPDM.planear(AgenteDelibPDM.java:67)
 	at agentedelib.AgenteDelib.processar(AgenteDelib.java:54)
 	at simulador.Simulador.passoExec(Simulador.java:300)
 	at simulador.Simulador.executar(Simulador.java:268)
 	at Teste.main(Teste.java:14)
 
-Jan 18, 2012 6:55:17 PM simulador.Simulador processarErro
 SEVERE: java.lang.NullPointerException
-	at AgenteDelibPDM.r(AgenteDelibPDM.java:36)
-	at MecProcPDM.utilTrans(MecProcPDM.java:78)
-	at MecProcPDM.maxTrans(MecProcPDM.java:91)
-	at MecProcPDM.iterarUtilidade(MecProcPDM.java:52)
-	at MecProcPDM.planearPolitica(MecProcPDM.java:29)
-	at AgenteDelibPDM.planear(AgenteDelibPDM.java:67)
-	at agentedelib.AgenteDelib.processar(AgenteDelib.java:54)
 	at simulador.Simulador.passoExec(Simulador.java:300)
 	at simulador.Simulador.executar(Simulador.java:268)
-	at Teste.main(Teste.java:14)
-
-Jan 18, 2012 6:55:27 PM simulador.Simulador processarErro
-SEVERE: java.lang.NullPointerException
-	at AgenteDelibPDM.r(AgenteDelibPDM.java:36)
-	at MecProcPDM.utilTrans(MecProcPDM.java:78)
-	at MecProcPDM.maxTrans(MecProcPDM.java:91)
-	at MecProcPDM.iterarUtilidade(MecProcPDM.java:52)
-	at MecProcPDM.planearPolitica(MecProcPDM.java:29)
-	at AgenteDelibPDM.planear(AgenteDelibPDM.java:67)
-	at agentedelib.AgenteDelib.processar(AgenteDelib.java:54)
-	at simulador.Simulador.passoExec(Simulador.java:300)
-	at simulador.Simulador.executar(Simulador.java:268)
-	at Teste.main(Teste.java:14)
-
-Jan 18, 2012 6:55:34 PM simulador.Simulador processarErro
-SEVERE: java.lang.NullPointerException
-	at AgenteDelibPDM.r(AgenteDelibPDM.java:36)
-	at MecProcPDM.utilTrans(MecProcPDM.java:78)
-	at MecProcPDM.maxTrans(MecProcPDM.java:91)
-	at MecProcPDM.iterarUtilidade(MecProcPDM.java:52)
-	at MecProcPDM.planearPolitica(MecProcPDM.java:29)
-	at AgenteDelibPDM.planear(AgenteDelibPDM.java:67)
-	at agentedelib.AgenteDelib.processar(AgenteDelib.java:54)
-	at simulador.Simulador.passoExec(Simulador.java:300)
-	at simulador.Simulador.executar(Simulador.java:268)
-	at Teste.main(Teste.java:14)
-
-Jan 18, 2012 6:56:56 PM simulador.Simulador processarErro
 SEVERE: java.lang.NullPointerException
 	at AgenteDelibPDM.r(AgenteDelibPDM.java:36)
 	at MecProcPDM.utilTrans(MecProcPDM.java:78)
