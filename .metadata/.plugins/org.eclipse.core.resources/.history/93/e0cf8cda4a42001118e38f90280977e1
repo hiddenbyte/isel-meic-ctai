@@ -1,0 +1,74 @@
+package aprendQ;
+
+
+import agente.MemEAV;
+import ambiente.Accao;
+
+public class MecAprendQ<E> {	
+	private double alpha;
+	private double gamma;
+	private double epsilon;
+	
+	private MemEAV<E,Accao,Double> qsa;
+	private Accao aMax;
+	private Double qMax;
+	
+	private Accao[] accoes;
+	
+	public MecAprendQ(Accao[] accoes,double alpha,double gamma,double epsilon) {
+		this.alpha = alpha;
+		this.gamma = gamma;
+		this.epsilon = epsilon;
+		this.accoes = accoes;
+		this.qsa = new MemEAV<E, Accao, Double>(new Double(0));
+	}
+
+	public Accao selAccao(E s) 
+	{
+		if(Math.random() > epsilon)
+		{
+			return maxAccao(s);
+		}
+		else
+		{
+			return gerarAccaoAleatoria(s);
+		}
+	}
+
+	private Accao gerarAccaoAleatoria(E s)
+	{
+		int iAccao = (int) Math.floor(Math.random() * accoes.length);
+		return accoes[iAccao];
+	}
+	
+	public void assimilar(E s, Accao a, E sn, double r)
+	{
+		aMax = maxAccao(sn);
+		
+		Double currentQsa = qsa.get(s,a);
+		
+		Double newQsa = currentQsa + alpha * (r + gamma * qsa.get(sn, aMax) - currentQsa);
+		
+		qsa.set(s,a, newQsa);
+	}
+	
+	private Accao maxAccao(E s)
+	{
+		aMax = null;
+		qMax = Double.NEGATIVE_INFINITY;
+		
+		for(Accao a : accoes)
+		{
+
+			Double qa = qsa.get(s,a);
+			
+			if(qa > qMax)
+			{
+				qMax = qa;
+				aMax = a;
+			}
+		}
+		
+		return aMax;
+	}
+}
